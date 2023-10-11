@@ -1,0 +1,11 @@
+{%for author in name%}
+    {{author['username']}}
+    {{author['id']}} 
+    <img src="{{author['picture']}}">
+    {{author['email']}}
+    {{author['nb_books']}}
+{%endfor%}
+
+{{name | length}}
+
+

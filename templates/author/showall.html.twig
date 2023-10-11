@@ -1,0 +1,24 @@
+<html>
+<head>
+ <h1> Author List </h1>
+ 
+</head>
+<body>
+<table border="1">
+    <tr>
+        <td>id</td>
+        <td>User</td>
+        <td>email</td>
+        <td>Delete</td>
+        <td>Edit</td>
+    </tr>
+    {%for author in Authors%}
+    <tr>
+     <td>{{author.id}}</td>
+     <td>{{author.username}} </td>
+     <td>{{author.email}}</td>
+     <td><a href="{{ path('app_delete', {'id': author.id}) }}">Delete</a></td>
+     <td><a href="{{ path('app_edit', {'id': author.id}) }}">Edit</a></td>
+     <td><a href="{{ path('app_authert', {'id': author.id}) }}">Details</a></td>
+    </tr>
+{%endfor%}
